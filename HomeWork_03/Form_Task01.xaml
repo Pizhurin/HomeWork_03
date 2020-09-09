@@ -18,12 +18,13 @@
         </Grid.ColumnDefinitions>
 
         <Image x:Name="Image_Task01_image" 
-               
+               Source="PiN.jpg"
+               Stretch="None"
                Grid.Column="0" 
-               Stretch="Fill"
                AllowDrop="True" 
                DragEnter="Image_Task01_image_DragEnter" 
-               Drop="Image_Task01_image_Drop"/>
+               Drop="Image_Task01_image_Drop"
+               Panel.ZIndex="1"/>
         <Label x:Name="Lable_Task01_lable"
                Content="Перетащите сюда необходимые файлы"
                Grid.Column="1"

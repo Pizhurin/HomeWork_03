@@ -23,5 +23,47 @@ namespace HomeWork_03
         {
             InitializeComponent();
         }
+
+        private void btn_Task02_buildNewGrid_Click(object sender, RoutedEventArgs e)
+        {
+            // очистка всех дочерних элементов
+            userGrid.Children.Clear();
+
+            // очистка столбцов и строк
+            userGrid.ColumnDefinitions.Clear();
+            userGrid.RowDefinitions.Clear();
+
+            // Паказать сетку
+            userGrid.ShowGridLines = true;
+            
+            ColumnDefinition colDef1 = new ColumnDefinition();
+
+            int columnCount = 0;
+            int rowsCount = 0;
+
+            if(Convert.ToInt32(textBox_Task02_columnCount.Text) != 0)
+            {
+                columnCount = Convert.ToInt32(textBox_Task02_columnCount.Text);
+
+                for(int i=0; i<columnCount; i++)
+                {                    
+                    ColumnDefinition column = new ColumnDefinition();
+                    userGrid.ColumnDefinitions.Add(column);
+                }
+            }
+
+            if (Convert.ToInt32(textBox_Task02_rowsCount.Text) != 0)
+            {
+                rowsCount = Convert.ToInt32(textBox_Task02_rowsCount.Text);
+
+                for (int i = 0; i < rowsCount; i++)
+                {
+                    RowDefinition rows = new RowDefinition();
+                    userGrid.RowDefinitions.Add(rows);
+                }
+            }
+
+            userGrid.ShowGridLines = true;
+        }
     }
 }

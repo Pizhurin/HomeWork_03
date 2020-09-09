@@ -28,7 +28,7 @@
                 Content="Task 02" 
                 Grid.Column="1" 
                 Width="100" 
-                Height="30"/>
+                Height="30" Click="btn_task02_Click"/>
 
     </Grid>
     

@@ -17,3 +17,8 @@ E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\obj\Debug\HomeWork_03.csproj.G
 E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\obj\Debug\HomeWork_03.csproj.CoreCompileInputs.cache
 E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\obj\Debug\HomeWork_03.exe
 E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\obj\Debug\HomeWork_03.pdb
+E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\bin\Debug\Microsoft.WindowsAPICodePack.dll
+E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\bin\Debug\Microsoft.WindowsAPICodePack.xml
+E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+E:\Step\.NET\WPF\HomeWork\HomeWork_03\HomeWork_03\obj\Debug\HomeWork_03.csproj.CopyComplete

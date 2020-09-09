@@ -34,5 +34,15 @@ namespace HomeWork_03
 
             this.Visibility = Visibility.Visible;
         }
+
+        private void btn_task02_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+
+            Form_Task02 form_Task02 = new Form_Task02();
+            form_Task02.ShowDialog();
+
+            this.Visibility = Visibility.Visible;
+        }
     }
 }

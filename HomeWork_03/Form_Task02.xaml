@@ -9,9 +9,34 @@
         Height="450" 
         Width="800"
         x:Name="Task02">
-    <Grid>
-        
-        
-        
+    <Grid Background="White" x:Name="mainGrid" AllowDrop="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <!-- header -->
+        <Menu x:Name="Task02_menu" Height="20" VerticalAlignment="Top" Grid.Row="0" Panel.ZIndex="1">
+            <MenuItem Header="File">
+                <MenuItem Header="Очистить картинки"/>
+                <MenuItem Header="Перемешать картинки"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- center -->
+        <Grid x:Name="userGrid" Background="Gray" AllowDrop="True" Panel.ZIndex="1" Grid.Row="1">          
+            <!-- Программно заполняемое поле сеткой -->
+        </Grid>
+
+        <!-- footer -->
+        <Label Content="Количество столбцов" HorizontalAlignment="Left" Margin="0 0 0 0" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Task02_columnCount" HorizontalAlignment="Left" Height="23" Margin="130 0 0 0" Grid.Row="2" Text="0" VerticalAlignment="Center" Width="50"/>
+        <Label Content="Количество строк" HorizontalAlignment="Left" Margin="200 0 0 0" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBox_Task02_rowsCount"  HorizontalAlignment="Left" Height="23" Margin="320 0 0 0" Grid.Row="2" Text="0" VerticalAlignment="Center" Width="50"/>
+        <Button x:Name="btn_Task02_buildNewGrid" Content="Задать сетку" HorizontalAlignment="Left"  Margin="400 0 0 0" Grid.Row="2" VerticalAlignment="Center" Width="100" Click="btn_Task02_buildNewGrid_Click"/>
+
+
+
     </Grid>
 </Window>
