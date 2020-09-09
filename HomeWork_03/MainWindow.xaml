@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HomeWork_03"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        x:Name="Form_Start"
+        Title="HomeWork_03" 
+        Height="150" 
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btn_task01" 
+                Content="Task 01" 
+                Grid.Column="0" 
+                Width="100" 
+                Height="30" Click="btn_task01_Click"/>
+        <Button x:Name="btn_task02" 
+                Content="Task 02" 
+                Grid.Column="1" 
+                Width="100" 
+                Height="30"/>
+
     </Grid>
+    
 </Window>

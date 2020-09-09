@@ -1,0 +1,45 @@
+﻿<Window x:Class="HomeWork_03.Form_Task01"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWork_03"
+        mc:Ignorable="d"
+        Title="Task 01" 
+        Height="450" 
+        Width="800"
+        x:Name="Task01"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="550*"/>
+            <ColumnDefinition Width="250*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="Image_Task01_image" 
+               
+               Grid.Column="0" 
+               Stretch="Fill"
+               AllowDrop="True" 
+               DragEnter="Image_Task01_image_DragEnter" 
+               Drop="Image_Task01_image_Drop"/>
+        <Label x:Name="Lable_Task01_lable"
+               Content="Перетащите сюда необходимые файлы"
+               Grid.Column="1"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               Margin="0 10"
+               Panel.ZIndex="1"/>
+        <ListBox x:Name="listBox_Task01_filesDragNDrop" 
+                 Grid.Column="1"
+                 Background = "Gray"
+                 AllowDrop="True" 
+                 DragEnter="listBox_Task01_filesDragNDrop_DragEnter" 
+                 Drop="listBox_Task01_filesDragNDrop_Drop" 
+                 PreviewMouseDown="listBox_Task01_filesDragNDrop_PreviewMouseDown"/>
+
+
+    </Grid>
+    
+</Window>
