@@ -118,5 +118,8 @@
   <ItemGroup>
     <Resource Include="PiN.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="target01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
