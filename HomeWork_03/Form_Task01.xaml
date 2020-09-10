@@ -11,10 +11,10 @@
         x:Name="Task01"
         WindowStartupLocation="CenterScreen">
 
-    <Grid Background="White">
+    <Grid Background="White" PreviewMouseUp="Grid_PreviewMouseUp">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="550*"/>
-            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="550*" x:Name="columnGrid_0"/>
+            <ColumnDefinition Width="250*" x:Name="columnGrid_1"/>
         </Grid.ColumnDefinitions>
 
         <Image x:Name="Image_Task01_image" 
@@ -24,7 +24,8 @@
                AllowDrop="True" 
                DragEnter="Image_Task01_image_DragEnter" 
                Drop="Image_Task01_image_Drop"
-               Panel.ZIndex="1"/>
+               Panel.ZIndex="1" 
+               PreviewMouseDown="Image_Task01_image_PreviewMouseDown" PreviewMouseMove="Image_Task01_image_PreviewMouseMove" PreviewMouseUp="Image_Task01_image_PreviewMouseUp"/>
         <Label x:Name="Lable_Task01_lable"
                Content="Перетащите сюда необходимые файлы"
                Grid.Column="1"
@@ -35,10 +36,21 @@
         <ListBox x:Name="listBox_Task01_filesDragNDrop" 
                  Grid.Column="1"
                  Background = "Gray"
-                 AllowDrop="True" 
+                 AllowDrop="True"                  
                  DragEnter="listBox_Task01_filesDragNDrop_DragEnter" 
                  Drop="listBox_Task01_filesDragNDrop_Drop" 
                  PreviewMouseDown="listBox_Task01_filesDragNDrop_PreviewMouseDown"/>
+        <Label  x:Name="lll" Content="Масштабирование" HorizontalAlignment="Center" Grid.Column="1" Margin="0 0 0 40" VerticalAlignment="Bottom"/>
+        <Slider x:Name="Slider_Task01_scaleSlider" 
+                Grid.Column="1" 
+                VerticalAlignment="Bottom" 
+                Margin="0 0 0 20" Width="200" 
+                HorizontalAlignment="Center" 
+                Value="50"
+                Maximum="100" 
+                ValueChanged="Slider_Task01_scaleSlider_ValueChanged" />
+        
+
 
 
     </Grid>

@@ -174,6 +174,9 @@ namespace HomeWork_03
                     }
                 }
             }
+
+            // Очистить коллекцию картинок
+            bitmaps.Clear();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)

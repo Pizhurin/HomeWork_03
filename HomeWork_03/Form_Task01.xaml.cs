@@ -23,10 +23,14 @@ namespace HomeWork_03
     /// </summary>
     public partial class Form_Task01 : Window
     {
+        double startMouseX = 0;
+        double startMouseY = 0;
+
+        bool isDown = false;
+
         public Form_Task01()
         {
-            InitializeComponent();           
-            
+            InitializeComponent();            
         }
 
         private void listBox_Task01_filesDragNDrop_DragEnter(object sender, DragEventArgs e)
@@ -118,5 +122,55 @@ namespace HomeWork_03
             }
         }
 
+        private void Image_Task01_image_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Point mousePosition = e.GetPosition(this);
+            startMouseX = mousePosition.X;
+            startMouseY = mousePosition.Y;
+
+            isDown = true;            
+        }
+
+        private void Image_Task01_image_PreviewMouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDown)
+            {
+                TransformGroup transformGroup = new TransformGroup();
+
+                TranslateTransform transform = new TranslateTransform();
+                transform.X = Mouse.GetPosition(this).X - startMouseX;
+                transform.Y = Mouse.GetPosition(this).Y - startMouseY;
+
+                ScaleTransform scale = new ScaleTransform(Slider_Task01_scaleSlider.Value / 50, Slider_Task01_scaleSlider.Value / 50, Image_Task01_image.ActualWidth / 2, Image_Task01_image.ActualHeight / 2);
+
+                transformGroup.Children.Add(transform);
+                transformGroup.Children.Add(scale);
+
+                Image_Task01_image.RenderTransform = transformGroup;
+            }
+        }
+
+        private void Image_Task01_image_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            isDown = false;
+        }
+
+        private void Slider_Task01_scaleSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            // Проверка значений Slider
+            //lll.Content = Math.Round(Slider_Task01_scaleSlider.Value, 1).ToString();
+
+            
+            // Mасштабирование текущего слайдера (картинки)
+            ScaleTransform scale = new ScaleTransform(Slider_Task01_scaleSlider.Value / 50, Slider_Task01_scaleSlider.Value / 50, Image_Task01_image.ActualWidth / 2, Image_Task01_image.ActualHeight/2);
+            Image_Task01_image.RenderTransform = scale;
+
+
+        }
+
+        private void Grid_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            isDown = false;
+        }
     }
 }
